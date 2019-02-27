@@ -14,16 +14,18 @@ Step 2. Add the dependency
 	dependencies {
 	        implementation 'com.github.leizhang564123:NetworkStateListener:v1.0.0'
 	}
-Step 3.AndroidManifest.xml  add permission：
+Step 3. AndroidManifest.xml  add permission：
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    
+    
 Step 4.Initialization in your Application：
-NetworkManager.getInstance().init(this);
+	NetworkManager.getInstance().init(this);
 Step 5.use in your activity or fragment：
- @Override
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
